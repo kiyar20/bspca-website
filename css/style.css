@@ -1,0 +1,268 @@
+:root {
+  --green: #245f2c;
+  --green-dark: #163e1d;
+  --green-light: #e4f1e8;
+  --cream: #fbf6e8;
+  --orange: #f7ad3b;
+  --text: #1f2a1f;
+  --muted: #666;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header and navigation */
+.site-header {
+  background: var(--green);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.55rem;
+  letter-spacing: 0.3px;
+  line-height: 1.15;
+}
+
+.brand-motto {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--orange);
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--orange) !important;
+}
+
+/* General layout */
+.page-section {
+  padding: 70px 0;
+}
+
+.section-title {
+  color: var(--green);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-intro {
+  max-width: 850px;
+  margin: 0 auto 35px auto;
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  padding: 75px 0;
+  background: var(--green);
+  color: var(--white);
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 25px;
+}
+
+.home-banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  background: white;
+  border-radius: 14px;
+  padding: 8px;
+}
+
+/* Buttons */
+.btn-orange {
+  background: var(--orange);
+  color: #111;
+  border: 2px solid var(--orange);
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 10px 24px;
+}
+
+.btn-orange:hover {
+  background: #e69a24;
+  border-color: #e69a24;
+  color: #111;
+}
+
+.btn-green {
+  background: var(--green);
+  color: var(--white);
+  border: 2px solid var(--green);
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 10px 24px;
+}
+
+.btn-green:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  color: var(--white);
+}
+
+.btn-outline-white {
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 10px 24px;
+}
+
+.btn-outline-white:hover {
+  background: var(--white);
+  color: var(--green);
+}
+
+/* Cards */
+.content-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.pet-photo {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.story-photo {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.pet-name {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.pet-details {
+  text-align: left;
+  margin: 14px 0 20px;
+}
+
+.pet-details li {
+  margin-bottom: 6px;
+}
+
+.help-box {
+  background: var(--green-light);
+  border-radius: 18px;
+  padding: 55px 25px;
+  text-align: center;
+}
+
+.freedom-card {
+  background: var(--white);
+  border: 1px solid #d7ded7;
+  border-radius: 12px;
+  padding: 22px;
+  font-weight: 700;
+  text-align: center;
+  height: 100%;
+}
+
+/* Forms */
+.form-panel {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.required-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 45px 0 20px;
+}
+
+.site-footer h5 {
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.site-footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--orange);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 25px;
+  padding-top: 18px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: 55px 0;
+    text-align: center;
+  }
+
+  .home-banner-img {
+    margin-top: 30px;
+  }
+
+  .page-section {
+    padding: 45px 0;
+  }
+
+  .help-box {
+    padding: 35px 18px;
+  }
+
+  .pet-photo {
+    height: 220px;
+  }
+}
